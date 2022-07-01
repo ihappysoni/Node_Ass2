@@ -1,9 +1,9 @@
 const express=require('express')
 const app=express();
 
-app.get('/',function(req,res){res.send("Goto /api/main/json or /api/main/about ")})
+app.get('/',function(req,res){res.send("Goto /api/main/json or /api/main/about or /api/main/header")})
 
-app.get('/api/main/html',function(req,res){
+app.get('/api/main/header',function(req,res){
     res.send("<h1>  Express js</h1>")
 })
 
@@ -12,7 +12,7 @@ app.get('/api/main/json',function(req,res){
 })
 
 app.get('/api/main/about',function(req,res){
-    res.send("Express is a node js web application framework that provides broad features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node js that helps manage servers and routes.")
+    res.send("Express is the most popular Node web framework, and is the underlying library for a number of other popular Node web frameworks. It provides mechanisms to:Write handlers for requests with different HTTP verbs at different URL paths (routes).Integrate with view rendering engines in order to generate responses by inserting data into templates.")
 
 })
 app.listen(3000);
